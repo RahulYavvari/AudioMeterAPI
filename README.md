@@ -2,7 +2,7 @@
 
 #### GenerateSoundAPI [CDN]: 
 ```
-https://cdn.jsdelivr.net/gh/RahulYavvari/AudioMeterAPI@latest/generateSoundAPI.min.js
+https://cdn.jsdelivr.net/gh/RahulYavvari/AudioMeterAPI/generateSoundAPI.min.js
 ```
 
 
