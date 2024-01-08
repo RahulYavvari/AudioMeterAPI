@@ -1,4 +1,4 @@
-function getSoundAPI(frequency, intensity, duration) {
+function getSoundAPI(frequency, intensity, duration, speakerSide) {
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const sampleRate = audioContext.sampleRate;
     const numSamples = duration * sampleRate;
@@ -7,12 +7,17 @@ function getSoundAPI(frequency, intensity, duration) {
 
     for (let i = 0; i < numSamples; i++) {
         const time = i / sampleRate;
-        data[i] = (4 * 10 ^ (((intensity + standard_audiometric_reference[i]) / 20) - 5)) * Math.sin(2 * Math.PI * frequency * time);
+        const stereoMultiplier = (speakerSide === "left") ? 1 : 0; // 1 for left, 0 for right
+        data[i] = stereoMultiplier * (4 * 10 ** (((intensity + standard_audiometric_reference[i]) / 20) - 5)) * Math.sin(2 * Math.PI * frequency * time);
     }
+
+    const panNode = audioContext.createStereoPanner();
+    panNode.pan.value = (speakerSide === "left") ? -1 : 1; // -1 for left, 1 for right
 
     const source = audioContext.createBufferSource();
     source.buffer = buffer;
-    source.connect(audioContext.destination);
+    source.connect(panNode);
+    panNode.connect(audioContext.destination);
     source.start();
 
     setTimeout(() => source.stop(), duration * 1000);
