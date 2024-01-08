@@ -16,10 +16,12 @@ https://cdn.jsdelivr.net/gh/RahulYavvari/AudioMeterAPI@main/generateSoundAPI.min
    `[-10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]`
 
 ## Function: getSoundAPI()
-Input(s): `frequency`, `intensity`, `duration`
+Input(s): `frequency`, `intensity`, `duration`, `speakerSide`
+
+speakerSide: It can take the value `left` or `right`, it decides the side of the stereo speaker to pan towards.
 
 ```
-getSoundAPI(<frequency(Hz)>, <intensity(dB)>, <duration(s)>)
+getSoundAPI(<frequency(Hz)>, <intensity(dB)>, <duration(s)>, <speakerSide("left" | "right")>)
 ```
 
 Output: It plays a single tone pure sinusoid from the speaker with the parameters given to the function as input.
