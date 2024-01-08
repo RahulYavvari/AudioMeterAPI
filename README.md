@@ -18,6 +18,8 @@ https://cdn.jsdelivr.net/gh/RahulYavvari/AudioMeterAPI@main/generateSoundAPI.min
 ## Function: getSoundAPI()
 Input(s): `frequency`, `intensity`, `duration`
 
-```getSoundAPI(<frequency(Hz)>, <intensity(dB)>, <duration(s)>)```
+```
+getSoundAPI(<frequency(Hz)>, <intensity(dB)>, <duration(s)>)
+```
 
 Output: It plays a single tone pure sinusoid from the speaker with the parameters given to the function as input.
