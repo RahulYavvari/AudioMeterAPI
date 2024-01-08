@@ -12,7 +12,7 @@ https://cdn.jsdelivr.net/gh/RahulYavvari/AudioMeterAPI@main/generateSoundAPI.min
    `[250, 500, 750, 1000, 1500, 2000, 3000, 4000, 6000, 8000]`
 
 2. ```reference_intensity_db```\
-   It has the range of intensities in decibles(dB) over over which a particular frequency will be modulated ans tested on the user.\
+   It has the range of intensities in decibles(dB) over over which a particular frequency will be modulated and tested on the user.\
    `[-10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]`
 
 ## Function: getSoundAPI()
