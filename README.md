@@ -1,6 +1,10 @@
-GenerateSoundAPI [CDN]: `https://cdn.jsdelivr.net/gh/RahulYavvari/AudioMeterAPI@main/generateSoundAPI.min.js`
-
 # GenerateSoundAPI Docs
+
+#### GenerateSoundAPI [CDN]: 
+```
+https://cdn.jsdelivr.net/gh/RahulYavvari/AudioMeterAPI@main/generateSoundAPI.min.js
+```
+
 
 ## Static Data (For application flow)
 1. ```reference_frequency```\
